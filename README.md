@@ -26,3 +26,15 @@ export default async function fetchUrls() {
     return urls;
 };
 ```
+
+Then, import the module in the `cli.js` script and create a new case in the source selection code:
+
+```js
+switch  (arg) {
+	case "your new source":
+		const source = yourNewSource;
+		urls = await source();
+	default:
+		break;
+};
+```
